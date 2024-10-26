@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectsContainer = document.getElementById('projects-container');
 
     // List of projects to exclude
-    const excludedProjects = ['BookSky', 'VideoSynthesis', 'NumberSystemConverter', 'Kapilan747', 'Elite'];
+    const excludedProjects = ['BookSky', 'VideoSynthesis', 'NumberSystemConverter', 'Kapilan747', 'Elite','Kapilan747.github.io.'];
 
     // Fetch GitHub repos dynamically
     async function fetchGitHubProjects() {
