@@ -910,7 +910,11 @@ footer p {
         height: 80%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+    }
+
+    .uls li {
+        padding-top: 10px;
+        padding-bottom: 30px;
     }
 
     .exit {
