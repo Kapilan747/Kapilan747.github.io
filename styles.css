@@ -6,12 +6,6 @@ body {
     color: #333;
     background-color: #e0f7fa;
     /* Light blue background */
-    background-image: url('assets/dots.png');
-    /* Local pattern */
-    background-repeat: repeat;
-    /* Ensure the pattern repeats */
-    background-size: 150px;
-    /* Adjust size of the pattern for visibility */
 
 }
 
