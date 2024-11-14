@@ -93,4 +93,16 @@ function closeMenu() {
     document.querySelector('.hamburger').style.display = 'block';
 }
 
+function sendEmail(event) {
+    event.preventDefault();  // Prevents page reload
+
+    emailjs.sendForm("service_534vqso", "template_7wdhwfq", event.target)
+        .then(() => {
+            alert("Message sent successfully!");
+        }, (error) => {
+            alert("Failed to send message, please try again.");
+            console.error("EmailJS error:", error);
+        });
+}
+
 
