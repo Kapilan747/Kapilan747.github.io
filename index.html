@@ -144,10 +144,10 @@
             <h2>Contact Me</h2>
             <p>I'd love to hear from you! Please fill out the form below.</p>
         </div>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Message" required></textarea>
+        <form class="contact-form" onsubmit="sendEmail(event)">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
@@ -155,13 +155,15 @@
     <footer>
         <p>© 2024 Kapilan. All Rights Reserved.</p>
     </footer>
+
+    <!-- Include the EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
-            emailjs.init("Nk082qpRJDe8BHhRu"); 
+            emailjs.init("Nk082qpRJDe8BHhRu");  // Replace "YOUR_USER_ID" with your EmailJS user ID
         })();
     </script>
+
     <script src="script.js"></script>
 </body>
-
 </html>
