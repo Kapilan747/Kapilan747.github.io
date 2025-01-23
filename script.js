@@ -50,18 +50,32 @@ function closeMenu() {
 
 
 function sendEmail(event) {
-    event.preventDefault(); // Prevent the form from reloading the page.
+    event.preventDefault(); // Prevent the form from refreshing the page
 
-    emailjs.sendForm("service_534vqso", "template_7wdhwfq", event.target)
-        .then(() => {
-            alert("Message sent successfully! Thank you for getting in touch.");
-            event.target.reset(); // Clear the form fields after successful submission.
-        })
-        .catch((error) => {
-            alert("Failed to send your message. Please try again later.");
-            console.error("EmailJS error:", error); // Log the error for debugging.
-        });
+    // Add email sending logic here, for now we'll simulate success
+    const isSuccessful = true; // Set this to `false` to simulate failure
+
+    if (isSuccessful) {
+        showAlert('Your message has been sent successfully!', 'success');
+    } else {
+        showAlert('Failed to send your message. Please try again.', 'error');
+    }
 }
+
+function showAlert(message, type) {
+    const alert = document.createElement('div');
+    alert.className = `custom-alert ${type}`;
+    alert.textContent = message;
+
+    document.body.appendChild(alert);
+
+    // Auto-hide after 3 seconds
+    setTimeout(() => {
+        alert.style.opacity = '0';
+        setTimeout(() => alert.remove(), 500); // Remove after fade-out
+    }, 3000);
+}
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
