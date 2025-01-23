@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -10,10 +11,10 @@ body {
 
 header {
     position: fixed;
-    top: 0;
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%; 
+    width: 60%; 
     background: rgba(255, 255, 255, 0.1); 
     backdrop-filter: blur(10px); 
     padding: 15px 30px;
@@ -133,7 +134,7 @@ nav .uls li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2c3e50; 
+    background-color: #2a2a2a; 
     padding: 80px 20px;
     position: relative;
     height: 100vh;
@@ -169,7 +170,7 @@ nav .uls li a:hover {
 button {
     font-size: 1.1rem;
     padding: 12px 24px;
-    background-color: #2980b9;  
+    background-color: #f39c12;  
     color: white;
     border: none;
     border-radius: 50px;
@@ -180,7 +181,7 @@ button {
 }
 
 button:hover {
-    background-color: #3498db; 
+    background-color: #f39c12; 
 }
 
 .social-links {
@@ -236,11 +237,27 @@ button:hover {
         font-size: 1.5rem;
     }
 }
+#home {
+    background: url('wp6955926-black-and-grey-abstract-wallpapers.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+}
+
+.home-content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    padding: 20px;
+    border-radius: 10px;
+}
+
 #about {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #34495e;
+    background-color: #191919;
     padding: 80px 20px;
     color: #ecf0f1;
 }
@@ -287,7 +304,7 @@ button:hover {
 button {
     font-size: 1.1rem;
     padding: 12px 24px;
-    background-color: #2980b9;
+    background-color: #f39c12;
     color: white;
     border: none;
     border-radius: 50px;
@@ -299,7 +316,7 @@ button {
 }
 
 button:hover {
-    background-color: #3498db;
+    background-color: #f39c12;
 }
 
 .about-image {
@@ -342,7 +359,7 @@ button:hover {
 }
 
 #projects {
-    background-color: #34495e;
+    background-color: #191919ef;
     padding: 60px 20px;
     color: whitesmoke;
 }
@@ -363,17 +380,25 @@ button:hover {
 
 .project-card {
     text-align: center;
-
-    background-color: #2c3e50;
+    background-color: #191919ef;/* Semi-transparent overlay */
     color: whitesmoke;
     width: 100%;
     max-width: 300px;
+    min-height: 10px; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     margin: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    /* border: solid 1px white; */
 }
 
 .project-card:hover {
@@ -382,60 +407,87 @@ button:hover {
 }
 
 .project-image {
-    width: 100%;
-    height: 200px;
+    /* border: solid red 3px; */
+    width: 100%; 
+    height: 200px; 
     object-fit: cover;
-    padding: 10px;
-    /* border: red solid 3px; */
-    border-radius: 10px; /* Rounded top corners */
-}
-
-.project-info {
-    padding: 15px;
-    text-align: center;
+    border-radius: 10px;
+    /* border-top-right-radius: 10px; */
+    background-color: #1f2d3a; 
 }
 
 .project-title {
-    font-size: 1rem; /* Smaller title size */
+    /* border: solid red 3px; */
+
+    font-size: 1rem; 
     font-weight: bold;
+    color: white;
     margin-bottom: 10px;
+    margin-top: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.github-link {
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #e67e22; 
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1; 
 }
 
- 
+.github-link:hover {
+    background-color: #d35400; 
+    transform: translateX(-50%) scale(1.05); 
+}
+
+.github-link:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+.project-card {
+    position: relative; 
+    overflow: hidden; 
+}
+
+.project-image {
+    position: relative; 
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 
 @media (max-width: 768px) {
     .projects-container {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .project-card {
-        min-width: 90%;
+        width: 90%; 
+        min-height: 350px; 
     }
 
     .project-title {
-        font-size: 1.2rem; /* Smaller title on mobile */
+        font-size: 0.9rem;
     }
 
     .project-card p {
-        font-size: 1rem;
+        font-size: 0.9rem; 
     }
 }
 
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .projects-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
 .skills-resume-container {
     display: flex;
@@ -444,12 +496,12 @@ button:hover {
     gap: 30px;
     width: 100%;
     padding: 60px 20px;
-    background-color: #34495e;  
+    background-color: #191919;  
     margin: 0; 
  }
 
 #skills, #resume {
-    background-color: #2c3e50;
+    background-color: #2a2a2a;
     padding: 60px 40px;
     color: whitesmoke;
     flex: 1; /* Ensures both sections take up equal space */
@@ -468,7 +520,7 @@ button:hover {
 }
 
 .skill-card, .resume-highlights {
-    background-color: #34495e;
+    background-color: #191919;
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -545,7 +597,7 @@ button:hover {
 
 
 #contact {
-    background-color: #34495e;
+    background-color: #191919;
     padding: 80px 20px;
     text-align: center;
     color: white;
@@ -566,7 +618,7 @@ button:hover {
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #2c3e50;
+    background-color: #2a2a2a;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -579,7 +631,9 @@ button:hover {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    color: black;
     font-size: 1rem;
+    margin-top: 5px;
 }
 
 .contact-form button {
@@ -594,12 +648,18 @@ button:hover {
     transition: background-color 0.3s ease;
 }
 
+.contact-form label {
+    color: white;
+    font-size: 15px;
+    /* border-bottom:2px solid white ; */
+}
+
 .contact-form button:hover {
     background-color: #e67e22;
 }
 
 footer {
-    background-color: #34495e;
+    background-color: #000000;
     padding: 20px;
     text-align: center;
     color: white;

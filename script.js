@@ -49,17 +49,19 @@ function closeMenu() {
 
 
 
-
 function sendEmail(event) {
-    event.preventDefault();  
+    event.preventDefault(); // Prevent the form from reloading the page.
 
     emailjs.sendForm("service_534vqso", "template_7wdhwfq", event.target)
         .then(() => {
-            alert("Message sent successfully!");
-        }, (error) => {
-            alert("Failed to send message, please try again.");
-            console.error("EmailJS error:", error);
+            alert("Message sent successfully! Thank you for getting in touch.");
+            event.target.reset(); // Clear the form fields after successful submission.
+        })
+        .catch((error) => {
+            alert("Failed to send your message. Please try again later.");
+            console.error("EmailJS error:", error); // Log the error for debugging.
         });
 }
+
 
 
