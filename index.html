@@ -35,14 +35,14 @@
         <div class="mob-view-div">
             <nav class="mob-view">
                 <ul class="uls">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills-resume">Skills</a></li>
-                    <li><a href="#skills-resume">Resume</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                    <li><a href="#about" onclick="closeMenu()">About</a></li>
+                    <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+                    <li><a href="#skills-resume" onclick="closeMenu()">Skills</a></li>
+                    <li><a href="#skills-resume" onclick="closeMenu()">Resume</a></li>
+                    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
                 </ul>
-                <h1 class="exit" onclick="closeMenu()">x</h1>
+                <h1 class="exit" onclick="closeMenu()"></h1>
             </nav>
         </div>
 
@@ -65,10 +65,12 @@
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/kapilanSD" target="_blank" aria-label="LinkedIn Profile"><i
                             class="fab fa-linkedin"></i></a>
-                    <a href="mailto:kapilan357@gmail.com" target="_blank" aria-label="Email"><i
-                            class="fas fa-envelope"></i></a>
+                    <a href="#contact" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     <a href="https://github.com/kapilan747" target="_blank" aria-label="GitHub Profile"><i
                             class="fab fa-github"></i></a>
+                    <a href="https://leetcode.com/u/Kapilan_247/" target="_blank" aria-label="LeetCode Profile">
+                        <img src="img/leetcode (1).svg" alt="" class="leetcode">
+                      </a>
                 </div>
             </div>
         </div>
@@ -76,23 +78,22 @@
 
 
 
-<!-- About Section -->
-<section id="about" role="complementary">
-    <div class="about-content">
-        <div class="about-text">
-            <h2>About Me</h2>
-            <p id="typing-effect"></p>
-            <button aria-label="Contact Me"
-                onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">
-                Contact Me
-            </button>
+    <!-- About Section -->
+    <section id="about" role="complementary">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p id="typing-effect"></p>
+                <button aria-label="Contact Me"
+                    onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">
+                    Contact Me
+                </button>
+            </div>
+            <div class="about-image">
+                <img src="img/About-img.jpg" alt="Kapilan working on data projects" class="about-img-rig">
+            </div>
         </div>
-        <div class="about-image">
-            <img src="sincerely-media-BfriYg0iOCs-unsplash.jpg"
-                alt="Kapilan working on data projects" class="about-img-rig">
-        </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -101,8 +102,8 @@
     <section id="projects" role="region" aria-labelledby="projects-heading">
         <h2 id="projects-heading">Projects</h2>
         <div id="projects-container" class="projects-container">
-         </div>
-     </section>
+        </div>
+    </section>
 
 
 
@@ -139,10 +140,8 @@
                         <!-- <li>Experience in leading AI-driven projects and solving real-world problems</li> -->
                     </ul>
                 </div>
-                <p>
-                    <a href="KapilanSD4.pdf" download aria-label="Download my resume in PDF format"
-                        class="download-link">Download Resume (PDF)</a>
-                </p>
+                <a href="KapilanSD4.pdf" download aria-label="Download my resume in PDF format"
+                    class="download-link">Download Resume (PDF)</a>
 
             </section>
         </div>
@@ -174,10 +173,10 @@
 
 
 
-     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
-            emailjs.init("Nk082qpRJDe8BHhRu");   
+            emailjs.init("Nk082qpRJDe8BHhRu");
         })();
     </script>
 
