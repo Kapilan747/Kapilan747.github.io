@@ -55,44 +55,47 @@
             <div class="text-div">
                 <h1 style="padding-bottom: 30px;">Hi, I'm Kapilan</h1>
                 <p style="padding-bottom: 30px;">
-                    I'm an aspiring Data Science Enthusiast, skilled in Python, SQL, and Machine Learning, focused on solving real-world problems through data-driven solutions.
+                    I'm an aspiring Data Science Enthusiast, skilled in Python, SQL, and Machine Learning, focused on
+                    solving real-world problems through data-driven solutions.
                 </p>
-                <button aria-label="View my work" onclick="document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' })">
+                <button aria-label="View my work"
+                    onclick="document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' })">
                     View My Work
                 </button>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/kapilanSD" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:kapilan357@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://github.com/kapilan747" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kapilanSD" target="_blank" aria-label="LinkedIn Profile"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="mailto:kapilan357@gmail.com" target="_blank" aria-label="Email"><i
+                            class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/kapilan747" target="_blank" aria-label="GitHub Profile"><i
+                            class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
     </section>
-    
 
 
-    <!-- About Section -->
-    <section id="about" role="complementary">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <ul>
-                    <li class="fade-in">I'm Kapilan, a passionate learner with a strong foundation in Machine Learning, and Data Analysis.</li>
-                    <li class="fade-in delay-1">With a blend of technical expertise and creativity, I specialize in transforming data into meaningful insights and impactful solutions.</li>
-                    <li class="fade-in delay-2">Currently pursuing a B.Tech in AI and Data Science, I am eager to contribute to solving complex challenges using data-driven approaches.</li>
-                </ul>
-                <button class="fade-in delay-3" aria-label="Contact Me"
-                    onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">
-                    Contact Me
-                </button>
-            </div>
-            
-            <div class="about-image">
-                <img src="high-angle-view-clipboard-with-blank-white-paper-pencil_23-2147840300.avif"
-                    alt="Kapilan working on data projects" class="about-img-rig">
-            </div>
+
+<!-- About Section -->
+<section id="about" role="complementary">
+    <div class="about-content">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p id="typing-effect"></p>
+            <button aria-label="Contact Me"
+                onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">
+                Contact Me
+            </button>
         </div>
-    </section>
+        <div class="about-image">
+            <img src="sincerely-media-BfriYg0iOCs-unsplash.jpg"
+                alt="Kapilan working on data projects" class="about-img-rig">
+        </div>
+    </div>
+</section>
+
+
+
 
 
     <section id="projects" role="region" aria-labelledby="projects-heading">
@@ -100,9 +103,10 @@
         <div id="projects-container" class="projects-container">
             <!-- Dynamic Projects will be fetched from GitHub API -->
         </div>
+        <!-- <button id="view-more-btn" onclick="toggleProjects()">View More</button> -->
     </section>
-    
-    
+
+
 
     <!-- Skills and Resume Section -->
     <section id="skills-resume" role="region" aria-labelledby="skills-resume-heading">
@@ -112,13 +116,15 @@
                 <h2 id="skills-heading">Technical Skills</h2>
                 <div class="skills-container">
                     <div class="skill" role="group" aria-labelledby="skills-list">
-                         <ul class="skill-card">
-                            <li><h3 id="skills-list">Key Skills:</h3></li>
+                        <ul class="skill-card">
+                            <li>
+                                <h3 id="skills-list">Key Skills:</h3>
+                            </li>
                             <li>Python</li>
                             <li>Machine Learning</li>
                             <li>SQL</li>
                             <!-- <li>Statistics</li> -->
-                            <li>R</li>
+                            <li>Java</li>
                         </ul>
                     </div>
                 </div>
@@ -127,10 +133,6 @@
             <!-- Resume Section -->
             <section id="resume" role="complementary" aria-labelledby="resume-heading">
                 <h2 id="resume-heading">Resume</h2>
-                <p>
-                    <a href="KapilanSD4.pdf" download aria-label="Download my resume in PDF format">Download Resume
-                        (PDF)</a>
-                </p>
                 <div class="resume-highlights">
                     <h3>Key Highlights:</h3>
                     <ul>
@@ -139,6 +141,11 @@
                         <!-- <li>Experience in leading AI-driven projects and solving real-world problems</li> -->
                     </ul>
                 </div>
+                <p>
+                    <a href="KapilanSD4.pdf" download aria-label="Download my resume in PDF format"
+                        class="download-link">Download Resume (PDF)</a>
+                </p>
+
             </section>
         </div>
     </section>
@@ -152,21 +159,21 @@
         <form class="contact-form" onsubmit="sendEmail(event)">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="from_name" placeholder="Enter your name" required />
-    
+
             <label for="email">Your Email</label>
             <input type="email" id="email" name="from_email" placeholder="Enter your email" required />
-    
+
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-    
+
             <button type="submit" aria-label="Send your message">Send Message</button>
         </form>
     </section>
-    
+
     <footer>
         <p>© 2025 Kapilan. All Rights Reserved.</p>
     </footer>
-    
+
 
 
     <!-- Include the EmailJS SDK -->

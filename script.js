@@ -64,4 +64,24 @@ function sendEmail(event) {
 }
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const text = `
+I'm Kapilan, a passionate learner with a strong foundation in Machine Learning, and Data Analysis.
+With a blend of technical expertise and creativity, I specialize in transforming data into meaningful insights and impactful solutions.
+Currently pursuing a B.Tech in AI and Data Science, I am eager to contribute to solving complex challenges using data-driven approaches.
+    `;
+    const typingEffect = document.getElementById("typing-effect");
+    let index = 0;
+
+    function type() {
+        if (index < text.length) {
+            typingEffect.textContent += text[index];
+            index++;
+            setTimeout(type, 50); // Adjust typing speed here
+        }
+    }
+
+    type();
+});
+
 
