@@ -16,13 +16,11 @@ html, body {
     overflow: auto;
 }
 
-body {
-    scrollbar-width: thin; /* For Firefox */
+body { 
     scrollbar-color: #e67e22 #2c2c2c;
 }
 
-/* WebKit Scrollbar Design */
-::-webkit-scrollbar {
+ ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
@@ -33,13 +31,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #e67e22; /* Yellow color */
+    background-color: #e67e22; 
     border-radius: 10px;
-    border: 2px solid #2c2c2c; /* Matches track for seamless design */
+    border: 2px solid #2c2c2c; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #d35400; /* Darker shade on hover */
+    background-color: #d35400;  
 }
 
 ::-webkit-scrollbar-corner {
@@ -190,6 +188,16 @@ nav .uls li a:hover {
     color: #ecf0f1; 
     height: 359px;
 }
+body {
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;     
+    user-select: none;          
+}
+img {
+    pointer-events: none;
+}
+
 
 .text-div h1 {
     font-size: 3rem;
@@ -289,7 +297,7 @@ button:hover {
 
 .home-content {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    background-color: rgba(0, 0, 0, 0.6);  
     padding: 20px;
     border-radius: 10px;
 }
@@ -408,8 +416,8 @@ button:hover {
 }
 
 #projects {
-    background: url('grey-geometrical-shapes-background.jpg') no-repeat center center/cover; /* Add your image */
-    color: #ffffff; /* Ensure text is visible over the image */
+    background: url('grey-geometrical-shapes-background.jpg') no-repeat center center/cover; 
+    color: #ffffff;  
     padding: 60px 20px; 
     position: relative;
     overflow: hidden;
@@ -427,7 +435,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 200%;
-    background: rgba(25, 25, 25, 0.56); /* Dark overlay for better readability */
+    background: rgba(25, 25, 25, 0.56); 
     z-index: -1;
 }
 
@@ -436,7 +444,7 @@ button:hover {
     font-weight: bold;
     margin-bottom: 30px;
     text-align: center;
-    z-index: 2; /* Ensure text is above the overlay */
+    z-index: 2; 
     position: relative;
     color: #e67e22;
 }
@@ -446,21 +454,20 @@ button:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
-    z-index: 2; /* Ensure the cards are above the overlay */
+    z-index: 2;  
     position: relative;
 }
 
 
 .project-card {
     text-align: center;
-    background-color: #19191900;/* Semi-transparent overlay */
+    background-color: #19191900; 
     color: whitesmoke;
     width: 100%;
     max-width: 400px;
     min-height: 250px; 
     border-radius: 10px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    overflow: hidden;
+     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     margin: 20px;
@@ -471,8 +478,7 @@ button:hover {
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
-    /* border: solid 1px white; */
-    
+     
 }
 
 .project-card:hover {
@@ -486,12 +492,12 @@ button:hover {
     object-fit: cover;
     border-radius: 10px;
     background-color: #1f2d3a; 
-    filter: grayscale(100%); /* Apply grayscale filter */
-    transition: filter 0.3s ease; /* Smooth transition for filter effect */
+    filter: grayscale(100%);  
+    transition: filter 0.3s ease;  
 }
 
 .project-card:hover .project-image {
-    filter: grayscale(0%); /* Remove grayscale on hover to bring back color */
+    filter: grayscale(0%);  
 }
 
 
@@ -592,7 +598,7 @@ button:hover {
     background-color: #2a2a2a;
     padding: 60px 40px;
     color:#f39c12;
-    flex: 1; /* Ensures both sections take up equal space */
+    flex: 1;  
     border-radius: 10px;
 }
 
@@ -669,7 +675,7 @@ button:hover {
     }
 
     #skills, #resume {
-        min-width: 90%; /* Ensure both sections use most of the screen width on small screens */
+        min-width: 90%;  
         margin-bottom: 20px;
     }
 

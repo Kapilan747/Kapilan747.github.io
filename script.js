@@ -8,8 +8,7 @@ async function fetchGitHubProjects() {
 
     repos.forEach(repo => {
         if (!excludedProjects.includes(repo.name)) {
-            // Construct the raw URL for the project-specific image
-            const imageUrl = `https://raw.githubusercontent.com/${username}/${repo.name}/main/img/download.jpg`;
+             const imageUrl = `https://raw.githubusercontent.com/${username}/${repo.name}/main/img/download.jpg`;
             
             const projectCard = document.createElement('div');
             projectCard.classList.add('project-card');
@@ -50,10 +49,9 @@ function closeMenu() {
 
 
 function sendEmail(event) {
-    event.preventDefault(); // Prevent the form from refreshing the page
+    event.preventDefault();  
 
-    // Add email sending logic here, for now we'll simulate success
-    const isSuccessful = true; // Set this to `false` to simulate failure
+     const isSuccessful = true;  
 
     if (isSuccessful) {
         showAlert('Your message has been sent successfully!', 'success');
@@ -69,13 +67,15 @@ function showAlert(message, type) {
 
     document.body.appendChild(alert);
 
-    // Auto-hide after 3 seconds
-    setTimeout(() => {
+     setTimeout(() => {
         alert.style.opacity = '0';
-        setTimeout(() => alert.remove(), 500); // Remove after fade-out
+        setTimeout(() => alert.remove(), 500);  
     }, 3000);
 }
-
+     document.addEventListener('contextmenu', function(event) {
+        event.preventDefault();   
+    });
+ 
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -91,11 +91,20 @@ Currently pursuing a B.Tech in AI and Data Science, I am eager to contribute to 
         if (index < text.length) {
             typingEffect.textContent += text[index];
             index++;
-            setTimeout(type, 50); // Adjust typing speed here
+            setTimeout(type, 50); 
         }
     }
 
     type();
+});
+ document.addEventListener("keydown", function (e) {
+    if (e.ctrlKey && (e.key === 'U' || e.key === 'I' || e.key === 'S' || e.key === 'J')) {
+        e.preventDefault();
+    }
+});
+
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
 });
 
 
