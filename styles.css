@@ -435,9 +435,9 @@ button:hover {
     }
 
     .about-text p {
-        border: red solid 3px;
+        /* border: red solid 3px; */
         margin-right: 20px;
-        color: red;
+        /* color: red; */
     }
 
     .about-img-rig {
