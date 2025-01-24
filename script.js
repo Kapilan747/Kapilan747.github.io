@@ -1,5 +1,5 @@
 const projectsContainer = document.getElementById('projects-container');
-const excludedProjects = ['BookSky', 'VideoSynthesis', 'NumberSystemConverter', 'Kapilan747', 'Elite','Kapilan747.github.io','WanderFinds'];
+const excludedProjects = ['BookSky', 'VideoSynthesis', 'NumberSystemConverter', 'Kapilan747', 'Elite', 'Kapilan747.github.io', 'WanderFinds'];
 
 async function fetchGitHubProjects() {
     const username = 'Kapilan747';
@@ -8,8 +8,8 @@ async function fetchGitHubProjects() {
 
     repos.forEach(repo => {
         if (!excludedProjects.includes(repo.name)) {
-             const imageUrl = `https://raw.githubusercontent.com/${username}/${repo.name}/main/img/download.jpg`;
-            
+            const imageUrl = `https://raw.githubusercontent.com/${username}/${repo.name}/main/img/download.jpg`;
+
             const projectCard = document.createElement('div');
             projectCard.classList.add('project-card');
             projectCard.innerHTML = `
@@ -34,7 +34,7 @@ const navLinks = document.querySelectorAll('header .uls li a');
 const sections = document.querySelectorAll('section');
 const options = {
     root: null,
-    threshold: 0.6 
+    threshold: 0.6
 };
 
 
@@ -49,9 +49,9 @@ function closeMenu() {
 
 
 function sendEmail(event) {
-    event.preventDefault();  
+    event.preventDefault();
 
-     const isSuccessful = true;  
+    const isSuccessful = true;
 
     if (isSuccessful) {
         showAlert('Your message has been sent successfully!', 'success');
@@ -67,15 +67,15 @@ function showAlert(message, type) {
 
     document.body.appendChild(alert);
 
-     setTimeout(() => {
+    setTimeout(() => {
         alert.style.opacity = '0';
-        setTimeout(() => alert.remove(), 500);  
+        setTimeout(() => alert.remove(), 500);
     }, 3000);
 }
-     document.addEventListener('contextmenu', function(event) {
-        event.preventDefault();   
-    });
- 
+document.addEventListener('contextmenu', function (event) {
+    event.preventDefault();
+});
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -91,13 +91,13 @@ Currently pursuing a B.Tech in AI and Data Science, I am eager to contribute to 
         if (index < text.length) {
             typingEffect.textContent += text[index];
             index++;
-            setTimeout(type, 50); 
+            setTimeout(type, 50);
         }
     }
 
     type();
 });
- document.addEventListener("keydown", function (e) {
+document.addEventListener("keydown", function (e) {
     if (e.ctrlKey && (e.key === 'U' || e.key === 'I' || e.key === 'S' || e.key === 'J')) {
         e.preventDefault();
     }
@@ -107,4 +107,12 @@ document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
 });
 
+
+document.addEventListener('contextmenu', (event) => event.preventDefault());
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I') || (event.ctrlKey && event.key === 'U')) {
+        event.preventDefault();
+    }
+});
 
