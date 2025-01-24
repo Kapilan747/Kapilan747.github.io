@@ -29,13 +29,13 @@ fetchGitHubProjects();
 
 
 
-const header = document.querySelector('header');
-const navLinks = document.querySelectorAll('header .uls li a');
-const sections = document.querySelectorAll('section');
-const options = {
-    root: null,
-    threshold: 0.6
-};
+// const header = document.querySelector('header');
+// const navLinks = document.querySelectorAll('header .uls li a');
+// const sections = document.querySelectorAll('section');
+// const options = {
+//     root: null,
+//     threshold: 0.6
+// };
 
 
 function openMenu() {
@@ -72,11 +72,6 @@ function showAlert(message, type) {
         setTimeout(() => alert.remove(), 500);
     }, 3000);
 }
-document.addEventListener('contextmenu', function (event) {
-    event.preventDefault();
-});
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
     const text = `
@@ -97,22 +92,11 @@ Currently pursuing a B.Tech in AI and Data Science, I am eager to contribute to 
 
     type();
 });
-document.addEventListener("keydown", function (e) {
-    if (e.ctrlKey && (e.key === 'U' || e.key === 'I' || e.key === 'S' || e.key === 'J')) {
-        e.preventDefault();
-    }
-});
+ 
 
-document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-});
+ 
 
 
-document.addEventListener('contextmenu', (event) => event.preventDefault());
-
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I') || (event.ctrlKey && event.key === 'U')) {
-        event.preventDefault();
-    }
-});
+ 
+ 
 
