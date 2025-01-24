@@ -26,18 +26,6 @@ async function fetchGitHubProjects() {
 
 fetchGitHubProjects();
 
-
-
-
-// const header = document.querySelector('header');
-// const navLinks = document.querySelectorAll('header .uls li a');
-// const sections = document.querySelectorAll('section');
-// const options = {
-//     root: null,
-//     threshold: 0.6
-// };
-
-
 function openMenu() {
     document.querySelector('.mob-view-div').classList.add('active');
 }
@@ -48,30 +36,7 @@ function closeMenu() {
 
 
 
-function sendEmail(event) {
-    event.preventDefault();
-
-    const isSuccessful = true;
-
-    if (isSuccessful) {
-        showAlert('Your message has been sent successfully!', 'success');
-    } else {
-        showAlert('Failed to send your message. Please try again.', 'error');
-    }
-}
-
-function showAlert(message, type) {
-    const alert = document.createElement('div');
-    alert.className = `custom-alert ${type}`;
-    alert.textContent = message;
-
-    document.body.appendChild(alert);
-
-    setTimeout(() => {
-        alert.style.opacity = '0';
-        setTimeout(() => alert.remove(), 500);
-    }, 3000);
-}
+ 
 
 document.addEventListener("DOMContentLoaded", function () {
     const text = `

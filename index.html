@@ -70,7 +70,7 @@
                             class="fab fa-github"></i></a>
                     <a href="https://leetcode.com/u/Kapilan_247/" target="_blank" aria-label="LeetCode Profile">
                         <img src="img/leetcode (1).svg" alt="" class="leetcode">
-                      </a>
+                    </a>
                 </div>
             </div>
         </div>
@@ -175,10 +175,38 @@
 
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function () {
+         (function () {
             emailjs.init("Nk082qpRJDe8BHhRu");
         })();
+
+         function sendEmail(event) {
+            event.preventDefault(); 
+
+             emailjs.sendForm('service_534vqso', 'template_7wdhwfq', event.target)
+                .then(() => {
+                    showAlert('Your message has been sent successfully!', 'success');
+                    console.log("Email sent successfully!");
+                })
+                .catch((error) => {
+                    showAlert('Failed to send your message. Please try again.', 'error');
+                    console.error("Email sending failed:", error);
+                });
+        }
+
+         function showAlert(message, type) {
+            const alert = document.createElement('div');
+            alert.className = `custom-alert ${type}`;
+            alert.textContent = message;
+
+            document.body.appendChild(alert);
+
+            setTimeout(() => {
+                alert.style.opacity = '0';
+                setTimeout(() => alert.remove(), 500);
+            }, 3000);
+        }
     </script>
+
 
     <script src="script.js"></script>
 </body>
