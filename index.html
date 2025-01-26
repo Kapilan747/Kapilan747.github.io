@@ -9,6 +9,15 @@
     <title>Kapilan's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ETN6619EY6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ETN6619EY6');
+    </script>
 </head>
 
 <body>
@@ -175,14 +184,14 @@
 
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
-         (function () {
+        (function () {
             emailjs.init("Nk082qpRJDe8BHhRu");
         })();
 
-         function sendEmail(event) {
-            event.preventDefault(); 
+        function sendEmail(event) {
+            event.preventDefault();
 
-             emailjs.sendForm('service_534vqso', 'template_7wdhwfq', event.target)
+            emailjs.sendForm('service_534vqso', 'template_7wdhwfq', event.target)
                 .then(() => {
                     showAlert('Your message has been sent successfully!', 'success');
                     console.log("Email sent successfully!");
@@ -193,7 +202,7 @@
                 });
         }
 
-         function showAlert(message, type) {
+        function showAlert(message, type) {
             const alert = document.createElement('div');
             alert.className = `custom-alert ${type}`;
             alert.textContent = message;
