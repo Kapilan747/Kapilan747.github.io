@@ -434,12 +434,6 @@ button:hover {
     background-color:#000000;
     color: #ffffff;  
     padding: 60px 20px; 
-    position: relative;
-    overflow: hidden;
-    max-height: 750px; 
-    overflow-y: scroll; 
-    scrollbar-width: thin;
-    scrollbar-color: #e67e22 #2c2c2c; 
     z-index: 0;
 }
 
