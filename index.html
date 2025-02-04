@@ -218,6 +218,88 @@
 
 
     <script src="script.js"></script>
+    <script>
+        // Function to handle intersection changes
+        const observerCallback = (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Add class to trigger animation
+              entry.target.classList.add('visible');
+            } else {
+              // Optionally remove the class so that the animation can re-trigger
+              // when the element comes back into view.
+              entry.target.classList.remove('visible');
+            }
+          });
+        };
+        
+        // Options: adjust threshold as needed
+        const observerOptions = {
+          threshold: 0.1
+        };
+        
+        // Create the observer
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        
+        // Select the elements you want to animate on scroll
+        document.querySelectorAll('header, nav .uls li a, .home-content').forEach(element => {
+          observer.observe(element);
+        });
+        </script>
+        <script>
+            // Callback for the About Image Observer
+            const aboutObserverCallback = (entries, aboutObserver) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+                } else {
+                  // Remove the class so that the animation re-triggers when scrolling back into view.
+                  entry.target.classList.remove('visible');
+                }
+              });
+            };
+          
+            // Observer options (adjust threshold as needed)
+            const aboutObserverOptions = {
+              threshold: 0.1
+            };
+          
+            // Create the observer for about-image elements
+            const aboutObserver = new IntersectionObserver(aboutObserverCallback, aboutObserverOptions);
+          
+            // Select the about-image elements and observe them
+            document.querySelectorAll('.about-image').forEach(image => {
+              aboutObserver.observe(image);
+            });
+          </script>
+          <script>
+            // Callback for the Projects Observer
+            const projectsObserverCallback = (entries, projectsObserver) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+                } else {
+                  // Remove the class so that the animation re-triggers when scrolling back into view.
+                  entry.target.classList.remove('visible');
+                }
+              });
+            };
+          
+            // Observer options (adjust threshold as needed)
+            const projectsObserverOptions = {
+              threshold: 0.1
+            };
+          
+            // Create the observer for .projects-container elements
+            const projectsObserver = new IntersectionObserver(projectsObserverCallback, projectsObserverOptions);
+          
+            // Select all elements with the class "projects-container" and observe them
+            document.querySelectorAll('.projects-container').forEach(container => {
+              projectsObserver.observe(container);
+            });
+          </script>
+          
+          
 </body>
 
 </html>

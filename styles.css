@@ -22,7 +22,7 @@ html {
 header {
     position: fixed;
     top: 15px;
-    left: 50%;
+    left: 20%;
     transform: translateX(-50%);
     width: 60%; 
     background: rgba(255, 255, 255, 0.1); 
@@ -788,8 +788,8 @@ footer p {
         padding: 12px 20px;
     }
 }
-
- @keyframes fadeInUp {
+/* Your Keyframes remain the same */
+@keyframes fadeInUp {
     0% {
         opacity: 0;
         transform: translateY(20px);
@@ -799,3 +799,112 @@ footer p {
         transform: translateY(0);
     }
 }
+
+@keyframes navbarAnimation {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLink {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes homeContentAnimation {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Initial states: hidden/translated off-screen */
+header {
+    /* Start hidden so animation can trigger on scroll */
+    opacity: 0;
+    transform: translateY(-50%);
+}
+
+nav .uls li a {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.home-content {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Visible state with animations */
+header.visible {
+    animation: navbarAnimation 1s ease-out forwards;
+}
+
+nav .uls li a.visible {
+    animation: fadeInLink 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.home-content.visible {
+    animation: homeContentAnimation 1s ease-out forwards;
+}
+
+
+@keyframes aboutImageAnimation {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Initial state for the image */
+  .about-image {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* When the image becomes visible, trigger the animation */
+  .about-image.visible {
+    animation: aboutImageAnimation 0.6s ease-out forwards;
+  }
+  
+  /* Keyframes for projects-container animation */
+@keyframes projectsAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Initial state for projects-container */
+  .projects-container {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  /* Trigger animation when visible */
+  .projects-container.visible {
+    animation: projectsAnimation 0.8s ease-out forwards;
+  }
+  
+  
