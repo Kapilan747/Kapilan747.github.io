@@ -1,5 +1,5 @@
 const projectsContainer = document.getElementById('projects-container');
-const excludedProjects = ['BookSky', 'VideoSynthesis', 'NumberSystemConverter', 'Kapilan747', 'Elite', 'Kapilan747.github.io', 'WanderFinds'];
+const excludedProjects = ['BookSky', 'VideoSynthesis', 'NumberSystemConverter', 'Kapilan747', 'Elite', ,'Python_Notes','Kapilan747.github.io', 'WanderFinds'];
 
 async function fetchGitHubProjects() {
     const username = 'Kapilan747';
