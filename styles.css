@@ -223,13 +223,23 @@ button:hover {
     transition: color 0.3s;
     /* border:red solid 2px; */
 }
-.leetcode {
-    width: 40px;
-    /* border:red solid 2px; */
-}
+.social-links a img {
+    margin-top: 8px;
+    width: 38px;
+    object-fit: cover;              
+    object-position: -5px -1px; 
+    height: 2rem;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s;
+  }
+
 .social-links a:hover {
     color: #f39c12;  
 }
+
+.leetcode:hover {
+    filter: brightness(0) saturate(100%) invert(51%) sepia(94%) saturate(747%) hue-rotate(2deg) brightness(99%) contrast(92%);
+  }
 
 @keyframes fadeInUp {
     to {
@@ -404,7 +414,7 @@ button:hover {
 }
 
 #projects {
-    background-color:#000000;
+    background-color:#191919;
     color: #ffffff;  
     padding: 60px 20px; 
     z-index: 0;
@@ -464,8 +474,11 @@ button:hover {
 }
 
 .project-card:hover {
+    cursor: default;
+    /* background-color: white; */
+    box-shadow: 0px 0px 10px var(--color-primary, #f39c12);
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); */
 }
 
 .project-image {
@@ -475,7 +488,7 @@ button:hover {
     border-radius: 10px;
     background-color: #1f2d3a; 
     filter: grayscale(100%);  
-    transition: filter 0.3s ease;  
+    transition: filter 0.5s ease;  
 }
 
 .project-card:hover .project-image {
@@ -495,7 +508,7 @@ button:hover {
 .project-title {
     font-size: 1rem; 
     font-weight: bold;
-    color: white;
+    color: #e67e22;
     margin-bottom: 10px;
     margin-top: 5px;
     text-overflow: ellipsis;
@@ -565,121 +578,6 @@ button:hover {
 }
 
 
-.skills-resume-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 30px;
-    width: 100%;
-    padding: 60px 20px;
-    background-color: #191919;  
-    margin: 0; 
- }
-
-#skills, #resume {
-    background-color: #2a2a2a;
-    padding: 60px 40px;
-    color:#f39c12;
-    flex: 1;  
-    border-radius: 10px;
-}
-
-#skills h2, #resume h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.skills-container, .resume-highlights {
-    margin-bottom: 20px;
-}
-
-.skill-card, .resume-highlights {
-    background-color: #191919;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-  }
-
-.skill-card h3, .resume-highlights h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
-
-.skill-card ul, .resume-highlights ul {
-    list-style: none;
-    padding: 0;
-}
-
-.skill-card li, .resume-highlights ul li {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #ecf0f1;
-    font-size: 20px;
-    list-style: none;
-}
-#resume a {
-    margin-left: 200px;
-    color: #f39c12;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.2rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 6px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#resume a:hover {
-    background-color: #f39c12;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-#resume a:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.6);
-}
-
-
-
-@media (max-width: 768px) {
-    .skills-resume-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 20px;
-    }
-
-    #skills, #resume {
-        min-width: 90%;  
-        margin-bottom: 20px;
-    }
-
-    #skills h2, #resume h2 {
-        font-size: 2rem;
-    }
-
-    .skill-card h3, .resume-highlights h3 {
-        font-size: 1.5rem;
-    }
-
-    .skill-card ul li, .resume-highlights ul li {
-        font-size: 1rem;
-    }
-    #resume  a {
-        /* border: red solid 3px; */
-        margin-left: 40px;
-        width: 260px;
-    }
-}
-
-
 #contact {
     background-color: #191919;
     padding: 80px 20px;
@@ -721,8 +619,8 @@ button:hover {
 }
 
 .contact-form button {
-    background-color: #f39c12;
-    color: white;
+    background-color: whitesmoke;
+    color: #f39c12;
     font-size: 1.2rem;
     font-weight: 600;
     padding: 15px 25px;
@@ -739,7 +637,8 @@ button:hover {
 }
 
 .contact-form button:hover {
-    background-color: #e67e22;
+    background-color: #f39c12;
+    color: whitesmoke;
 }
  .custom-alert {
     position: fixed;
@@ -788,8 +687,7 @@ footer p {
         padding: 12px 20px;
     }
 }
-/* Your Keyframes remain the same */
-@keyframes fadeInUp {
+ @keyframes fadeInUp {
     0% {
         opacity: 0;
         transform: translateY(20px);
@@ -829,9 +727,7 @@ footer p {
     }
 }
 
-/* Initial states: hidden/translated off-screen */
 header {
-    /* Start hidden so animation can trigger on scroll */
     opacity: 0;
     transform: translateY(-50%);
 }
@@ -846,7 +742,6 @@ nav .uls li a {
     transform: translateY(20px);
 }
 
-/* Visible state with animations */
 header.visible {
     animation: navbarAnimation 1s ease-out forwards;
 }
@@ -872,19 +767,16 @@ nav .uls li a.visible {
     }
   }
   
-  /* Initial state for the image */
   .about-image {
     opacity: 0;
     transform: translateX(-20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
   
-  /* When the image becomes visible, trigger the animation */
   .about-image.visible {
     animation: aboutImageAnimation 0.6s ease-out forwards;
   }
   
-  /* Keyframes for projects-container animation */
 @keyframes projectsAnimation {
     0% {
       opacity: 0;
@@ -896,15 +788,48 @@ nav .uls li a.visible {
     }
   }
   
-  /* Initial state for projects-container */
   .projects-container {
     opacity: 0;
     transform: translateY(20px);
   }
   
-  /* Trigger animation when visible */
   .projects-container.visible {
     animation: projectsAnimation 0.8s ease-out forwards;
   }
   
+  #confirmation {
+    margin-top: 70px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f39c12;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeInOut 3s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -40px);
+    }
+    20% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+    80% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -40px);
+    }
+  }
   

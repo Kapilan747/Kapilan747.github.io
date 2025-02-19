@@ -2,304 +2,285 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio of Kapilan747, showcasing expertise in Data Science, AI, and Web Development.">
-    <title>Kapilan's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ETN6619EY6"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portfolio of Kapilan747, showcasing expertise in Data Science, AI, and Web Development.">
+  <title>Kapilan's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ETN6619EY6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-        gtag('config', 'G-ETN6619EY6');
-    </script>
+    gtag('config', 'G-ETN6619EY6');
+  </script>
+  <script src="tech.js"></script>
+  <script src="data.js"></script>
+  <link rel="stylesheet" href="tech.css">
 </head>
 
 <body>
-    <header>
-        <nav class="pc-view">
-            <ul class="uls">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills-resume">Skills</a></li>
-                <li><a href="#skills-resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+  <header>
+    <nav class="pc-view">
+      <ul class="uls">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#tech-stack-title">Skills</a></li>
+        <li><a id="downloadResume" href="resume/KapilanSD4.pdf" download="KapilanSD4.pdf">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="confirmation">Thank you for downloading my resume!</div>
 
-        <!-- Hamburger Icon for Mobile View -->
-        <div class="hamburger" onclick="openMenu()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+    <!-- Hamburger Icon for Mobile View -->
+    <div class="hamburger" onclick="openMenu()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mob-view-div">
+      <nav class="mob-view">
+        <ul class="uls">
+          <li><a href="#home" onclick="closeMenu()">Home</a></li>
+          <li><a href="#about" onclick="closeMenu()">About</a></li>
+          <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+          <li><a href="#tech-stack-title" onclick="closeMenu()">Skills</a></li>
+          <li><a id="downloadResume" href="resume/KapilanSD4.pdf" download="KapilanSD4.pdf">Resume</a></li>
+          <div id="confirmation">Thank you for downloading my resume!</div>
+          <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+        <h1 class="exit" onclick="closeMenu()"></h1>
+      </nav>
+    </div>
+
+
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" role="main">
+    <div class="home-content">
+      <div class="text-div">
+        <h1 style="padding-bottom: 30px;">Hi, I'm Kapilan</h1>
+        <p style="padding-bottom: 30px;">
+          I'm an aspiring Data Science Enthusiast, skilled in Python, SQL, and Machine Learning, focused on
+          solving real-world problems through data-driven solutions.
+        </p>
+        <button aria-label="View my work"
+          onclick="document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' })">
+          View My Work
+        </button>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/kapilanSD" target="_blank" aria-label="LinkedIn Profile"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="#contact" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/kapilan747" target="_blank" aria-label="GitHub Profile"><i
+              class="fab fa-github"></i></a>
+          <a href="https://leetcode.com/Kapilan_247" target="_blank" aria-label="LeetCode Profile">
+            <img class = "leetcode "src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" 
+                 alt="LeetCode">
+          </a>
         </div>
-
-        <!-- Mobile Navigation Menu -->
-        <div class="mob-view-div">
-            <nav class="mob-view">
-                <ul class="uls">
-                    <li><a href="#home" onclick="closeMenu()">Home</a></li>
-                    <li><a href="#about" onclick="closeMenu()">About</a></li>
-                    <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
-                    <li><a href="#skills-resume" onclick="closeMenu()">Skills</a></li>
-                    <li><a href="#skills-resume" onclick="closeMenu()">Resume</a></li>
-                    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-                </ul>
-                <h1 class="exit" onclick="closeMenu()"></h1>
-            </nav>
-        </div>
-
-
-    </header>
-
-    <!-- Home Section -->
-    <section id="home" role="main">
-        <div class="home-content">
-            <div class="text-div">
-                <h1 style="padding-bottom: 30px;">Hi, I'm Kapilan</h1>
-                <p style="padding-bottom: 30px;">
-                    I'm an aspiring Data Science Enthusiast, skilled in Python, SQL, and Machine Learning, focused on
-                    solving real-world problems through data-driven solutions.
-                </p>
-                <button aria-label="View my work"
-                    onclick="document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' })">
-                    View My Work
-                </button>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/kapilanSD" target="_blank" aria-label="LinkedIn Profile"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="#contact" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://github.com/kapilan747" target="_blank" aria-label="GitHub Profile"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://leetcode.com/u/Kapilan_247/" target="_blank" aria-label="LeetCode Profile">
-                        <img src="img/leetcode (1).svg" alt="" class="leetcode">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
 
 
-    <!-- About Section -->
-    <section id="about" role="complementary">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p id="typing-effect"></p>
-                <button aria-label="Contact Me"
-                    onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">
-                    Contact Me
-                </button>
-            </div>
-            <div class="about-image">
-                <img src="img/About-img.jpg" alt="Kapilan working on data projects" class="about-img-rig">
-            </div>
-        </div>
-    </section>
+  <!-- About Section -->
+  <section id="about" role="complementary">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p id="typing-effect"></p>
+        <button aria-label="Contact Me"
+          onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">
+          Contact Me
+        </button>
+      </div>
+      <div class="about-image">
+        <img src="img/About-img.jpg" alt="Kapilan working on data projects" class="about-img-rig">
+      </div>
+    </div>
+  </section>
 
 
 
 
 
-    <section id="projects" role="region" aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Projects</h2>
-        <div id="projects-container" class="projects-container">
-        </div>
-    </section>
+  <section id="projects" role="region" aria-labelledby="projects-heading">
+    <h2 id="projects-heading">Projects</h2>
+    <div id="projects-container" class="projects-container">
+    </div>
+  </section>
 
 
 
-    <!-- Skills and Resume Section -->
-    <section id="skills-resume" role="region" aria-labelledby="skills-resume-heading">
-        <div class="skills-resume-container">
-            <!-- Skills Section -->
-            <section id="skills" role="region" aria-labelledby="skills-heading">
-                <h2 id="skills-heading">Technical Skills</h2>
-                <div class="skills-container">
-                    <div class="skill" role="group" aria-labelledby="skills-list">
-                        <ul class="skill-card">
-                            <li>
-                                <h3 id="skills-list">Key Skills:</h3>
-                            </li>
-                            <li>Python</li>
-                            <li>Machine Learning</li>
-                            <li>SQL</li>
-                            <!-- <li>Statistics</li> -->
-                            <li>Java</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
 
-            <!-- Resume Section -->
-            <section id="resume" role="complementary" aria-labelledby="resume-heading">
-                <h2 id="resume-heading">Resume</h2>
-                <div class="resume-highlights">
-                    <h3>Key Highlights:</h3>
-                    <ul>
-                        <li>Pursuing B.Tech in Artificial Intelligence and Data Science</li>
-                        <li>Proficient in Python, SQL, Machine Learning, and Data Analysis</li>
-                        <!-- <li>Experience in leading AI-driven projects and solving real-world problems</li> -->
-                    </ul>
-                </div>
-                <a href="resume/KapilanSD4.pdf" download aria-label="Download my resume in PDF format"
-                    class="download-link">Download Resume (PDF)</a>
+  <p id="tech-stack-title">Tech Stack</p>
+  <div id="tech" class="tech-stack">
+    <div class="tech-stack-detail">
 
-            </section>
-        </div>
-    </section>
+      <p class="label-stack">Programming Languages</p>
+      <div id="programming" data-aos="fade-right" data-aos-delay="700" class="tech-row"></div>
+
+      <p class="label-stack">Web development</p>
+      <div id="web-tech" data-aos="fade-right" data-aos-delay="300" class="tech-row"></div>
+
+      <p class="label-stack">Server side</p>
+      <div id="server-tech" data-aos="fade-right" data-aos-delay="400" class="tech-row"></div>
+
+      <p class="label-stack">Mobile development</p>
+      <div id="mobile-tech" data-aos="fade-right" data-aos-delay="200" class="tech-row"></div>
+
+      <p class="label-stack">Databases</p>
+      <div id="database-tech" data-aos="fade-right" data-aos-delay="500" class="tech-row"></div>
+
+      <p class="label-stack">Version controlloing & management</p>
+      <div id="vc-tech" data-aos="fade-right" data-aos-delay="600" class="tech-row"></div>
+
+      <p class="label-stack">Tools</p>
+      <div id="tools" data-aos="fade-right" data-aos-delay="600" class="tech-row"></div>
+    </div>
+
+    <div class="stack-illustration">
+      <img id="stack-illustration" src="tech/stack2.svg" alt="stack illustrations" />
+    </div>
+  </div>
 
 
-    <section id="contact">
-        <div class="contact-header">
-            <h2>Contact Me</h2>
-            <p>I'd love to hear from you! Please fill out the form below to get in touch.</p>
-        </div>
-        <form class="contact-form" onsubmit="sendEmail(event)">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="from_name" placeholder="Enter your name" required />
+  <section id="contact">
+    <div class="contact-header">
+      <h2>Contact Me</h2>
+      <p>I'd love to hear from you! Please fill out the form below to get in touch.</p>
+    </div>
+    <form class="contact-form" onsubmit="sendEmail(event)">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="from_name" placeholder="Enter your name" required />
 
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="from_email" placeholder="Enter your email" required />
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="from_email" placeholder="Enter your email" required />
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
 
-            <button type="submit" aria-label="Send your message">Send Message</button>
-        </form>
-    </section>
+      <button type="submit" aria-label="Send your message">Send Message</button>
+    </form>
+  </section>
 
-    <footer>
-        <p>© 2025 Kapilan. All Rights Reserved.</p>
-    </footer>
+  <footer>
+    <p>© 2025 Kapilan. All Rights Reserved.</p>
+  </footer>
 
 
 
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("Nk082qpRJDe8BHhRu");
-        })();
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("Nk082qpRJDe8BHhRu");
+    })();
 
-        function sendEmail(event) {
-            event.preventDefault();
+    function sendEmail(event) {
+      event.preventDefault();
 
-            emailjs.sendForm('service_534vqso', 'template_7wdhwfq', event.target)
-                .then(() => {
-                    showAlert('Your message has been sent successfully!', 'success');
-                    console.log("Email sent successfully!");
-                })
-                .catch((error) => {
-                    showAlert('Failed to send your message. Please try again.', 'error');
-                    console.error("Email sending failed:", error);
-                });
-        }
-
-        function showAlert(message, type) {
-            const alert = document.createElement('div');
-            alert.className = `custom-alert ${type}`;
-            alert.textContent = message;
-
-            document.body.appendChild(alert);
-
-            setTimeout(() => {
-                alert.style.opacity = '0';
-                setTimeout(() => alert.remove(), 500);
-            }, 3000);
-        }
-    </script>
-
-
-    <script src="script.js"></script>
-    <script>
-        // Function to handle intersection changes
-        const observerCallback = (entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              // Add class to trigger animation
-              entry.target.classList.add('visible');
-            } else {
-              // Optionally remove the class so that the animation can re-trigger
-              // when the element comes back into view.
-              entry.target.classList.remove('visible');
-            }
-          });
-        };
-        
-        // Options: adjust threshold as needed
-        const observerOptions = {
-          threshold: 0.1
-        };
-        
-        // Create the observer
-        const observer = new IntersectionObserver(observerCallback, observerOptions);
-        
-        // Select the elements you want to animate on scroll
-        document.querySelectorAll('header, nav .uls li a, .home-content').forEach(element => {
-          observer.observe(element);
+      emailjs.sendForm('service_534vqso', 'template_7wdhwfq', event.target)
+        .then(() => {
+          showAlert('Your message has been sent successfully!', 'success');
+          console.log("Email sent successfully!");
+        })
+        .catch((error) => {
+          showAlert('Failed to send your message. Please try again.', 'error');
+          console.error("Email sending failed:", error);
         });
-        </script>
-        <script>
-            // Callback for the About Image Observer
-            const aboutObserverCallback = (entries, aboutObserver) => {
-              entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add('visible');
-                } else {
-                  // Remove the class so that the animation re-triggers when scrolling back into view.
-                  entry.target.classList.remove('visible');
-                }
-              });
-            };
-          
-            // Observer options (adjust threshold as needed)
-            const aboutObserverOptions = {
-              threshold: 0.1
-            };
-          
-            // Create the observer for about-image elements
-            const aboutObserver = new IntersectionObserver(aboutObserverCallback, aboutObserverOptions);
-          
-            // Select the about-image elements and observe them
-            document.querySelectorAll('.about-image').forEach(image => {
-              aboutObserver.observe(image);
-            });
-          </script>
-          <script>
-            // Callback for the Projects Observer
-            const projectsObserverCallback = (entries, projectsObserver) => {
-              entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add('visible');
-                } else {
-                  // Remove the class so that the animation re-triggers when scrolling back into view.
-                  entry.target.classList.remove('visible');
-                }
-              });
-            };
-          
-            // Observer options (adjust threshold as needed)
-            const projectsObserverOptions = {
-              threshold: 0.1
-            };
-          
-            // Create the observer for .projects-container elements
-            const projectsObserver = new IntersectionObserver(projectsObserverCallback, projectsObserverOptions);
-          
-            // Select all elements with the class "projects-container" and observe them
-            document.querySelectorAll('.projects-container').forEach(container => {
-              projectsObserver.observe(container);
-            });
-          </script>
-          
-          
+    }
+
+    function showAlert(message, type) {
+      const alert = document.createElement('div');
+      alert.className = `custom-alert ${type}`;
+      alert.textContent = message;
+
+      document.body.appendChild(alert);
+
+      setTimeout(() => {
+        alert.style.opacity = '0';
+        setTimeout(() => alert.remove(), 500);
+      }, 3000);
+    }
+  </script>
+
+
+  <script src="script.js"></script>
+  <script>
+    const observerCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    };
+
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    document.querySelectorAll('header, nav .uls li a, .home-content').forEach(element => {
+      observer.observe(element);
+    });
+  </script>
+  <script>
+    const aboutObserverCallback = (entries, aboutObserver) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    };
+
+    const aboutObserverOptions = {
+      threshold: 0.1
+    };
+
+    const aboutObserver = new IntersectionObserver(aboutObserverCallback, aboutObserverOptions);
+
+    document.querySelectorAll('.about-image').forEach(image => {
+      aboutObserver.observe(image);
+    });
+  </script>
+  <script>
+    const projectsObserverCallback = (entries, projectsObserver) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    };
+
+    const projectsObserverOptions = {
+      threshold: 0.1
+    };
+
+    const projectsObserver = new IntersectionObserver(projectsObserverCallback, projectsObserverOptions);
+
+    document.querySelectorAll('.projects-container').forEach(container => {
+      projectsObserver.observe(container);
+    });
+  </script>
+
+
 </body>
 
 </html>

@@ -40,9 +40,7 @@ function closeMenu() {
 
 document.addEventListener("DOMContentLoaded", function () {
     const text = `
-I'm Kapilan, a passionate learner with a strong foundation in Machine Learning, and Data Analysis.
-With a blend of technical expertise and creativity, I specialize in transforming data into meaningful insights and impactful solutions.
-Currently pursuing a B.Tech in AI and Data Science, I am eager to contribute to solving complex challenges using data-driven approaches.
+I'm Kapilan, a passionate learner with a strong foundation in Machine Learning, and Data Analysis.With a blend of technical expertise and creativity, I specialize in transforming data into meaningful insights and impactful solutions.Currently pursuing a B.Tech in AI and Data Science, I am eager to contribute to solving complex challenges using data-driven approaches.
     `;
     const typingEffect = document.getElementById("typing-effect");
     let index = 0;
@@ -58,9 +56,19 @@ Currently pursuing a B.Tech in AI and Data Science, I am eager to contribute to 
     type();
 });
  
-
- 
-
+document.getElementById("downloadResume").addEventListener("click", function () {
+    const confirmation = document.getElementById("confirmation");
+    confirmation.style.display = "block";
+  
+    confirmation.style.animation = "none";
+    void confirmation.offsetWidth;
+    confirmation.style.animation = "fadeInOut 3s ease-in-out forwards";
+  
+    setTimeout(() => {
+      confirmation.style.display = "none";
+    }, 3000);
+  });
+  
 
  
  
