@@ -833,3 +833,9 @@ nav .uls li a.visible {
     }
   }
   
+  @media (max-width: 768px) {
+    #stack-illustration {
+      display: none;
+    }
+  }
+  

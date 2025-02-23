@@ -30,11 +30,11 @@ let data = {
         icon: "tech/api.svg",
         type: "server-tech",
       },
-      {
-        name: "Java",
-        icon: "tech/java.svg",
-        type: "mobile-tech",
-      },
+      // {
+      //   name: "Java",
+      //   icon: "tech/java.svg",
+      //   type: "mobile-tech",
+      // },
       {
         name: "MySQL",
         icon: "tech/mysql.png",
@@ -65,11 +65,11 @@ let data = {
         icon: "tech/gitlab.svg",
         type: "vc-tech",
       },
-      {
-        name: "Notion",
-        icon: "tech/notion.svg",
-        type: "vc-tech",
-      },
+      // {
+      //   name: "Notion",
+      //   icon: "tech/notion.svg",
+      //   type: "vc-tech",
+      // },
       {
         name: "Python",
         icon: "tech/python.svg",
