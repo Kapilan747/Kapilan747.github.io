@@ -457,7 +457,6 @@ button:hover {
     color: whitesmoke;
     width: 100%;
     max-width: 400px;
-    min-height: 250px; 
     border-radius: 10px;
      overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -469,7 +468,7 @@ button:hover {
     padding-top: 5px;
     display: flex;
     flex-direction: column; 
-    justify-content: space-between;
+    justify-content:space-around;
      
 }
 
@@ -837,5 +836,16 @@ nav .uls li a.visible {
     #stack-illustration {
       display: none;
     }
+    .social-links a img {
+        width: 24px;
+        height: 28px;
+    }
+    .project-image{
+        filter: grayscale(0%);
+
+    }
+
+   
+    
   }
   
