@@ -7,7 +7,7 @@ const projects = [
     title: "Covid Analysis",
     description:
       "Comprehensive analysis of the COVID-19 pandemic, aimed at uncovering trends, insights, and important findings from WHO publicly available datasets.",
-    image: "/assets/covid.jpg",
+    image: "./assets/covid.jpg",
     link: "#",
     techUsed: "Python, Pandas, Matplotlib, Seaborn",
     github: "https://github.com/Kapilan747/covid-analysis",
@@ -16,7 +16,7 @@ const projects = [
     title: "Nobel Prize Analysis",
     description:
       "Nobel Prize data to identify trends in gender, birth countries, and prize distribution over time. Key insights include top categories, peak decades, and female representation.",
-    image: "/assets/nobel.webp",
+    image: "./assets/nobel.webp",
     link: "#",
     techUsed: "Python, Pandas, Plotly",
     github: "https://github.com/Kapilan747/nobel-prize-analysis",
@@ -25,7 +25,7 @@ const projects = [
     title: "Flight Weather Delay Analysis",
     description:
       "Analysis of the relationship between wind speed and flight departure delays. The project groups flights based on wind speed and examines weather impacts on departure times.",
-    image: "/assets/flight.jpg",
+    image: "./assets/flight.jpg",
     link: "#",
     techUsed: "Python, Pandas, Scikit-learn, Seaborn",
     github: "https://github.com/Kapilan747/flight-weather-delay",
