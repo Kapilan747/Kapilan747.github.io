@@ -1,4 +1,3 @@
-// src/components/Projects.jsx
 import React, { useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Projects.css";

@@ -1,4 +1,3 @@
-// src/components/Skills.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import data from "../data"; // Import data.js

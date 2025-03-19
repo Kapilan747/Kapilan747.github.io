@@ -1,4 +1,3 @@
-// src/data.js
 const data = {
     tech: [
       { name: "React", icon: "/assets/tech/react.svg", type: "web-tech" },
