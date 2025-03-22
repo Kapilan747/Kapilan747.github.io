@@ -208,6 +208,7 @@
  @media (max-width: 768px) {
   .hero-section {
     padding: 60px 10px;
+    background: none;
   }
   .hero-title {
     font-size: 2.2rem;

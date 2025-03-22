@@ -150,6 +150,10 @@ body {
     gap: 20px; 
   }
 
+  .about-section {
+    background: none;
+  }
+
   .about-box {
     width: 90%;
     margin: 0 auto;
