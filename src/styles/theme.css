@@ -1,35 +1,21 @@
-/* src/styles/theme.css */
 
-/* ======================================= */
-/*           Color Variables               */
-/* ======================================= */
 :root {
-  /* Light background palette */
   --bg-primary: #f9f9f9;
   --bg-secondary: #ffffff;
 
-  /* Accent colors */
   --accent-primary: #4e73df;
-  /* blue accent */
   --accent-secondary: #1cc88a;
-  /* green accent */
   --accent-gradient: linear-gradient(90deg, #4e73df, #1cc88a);
 
-  /* Text colors */
   --text-primary: #333333;
   --text-secondary: #555555;
 
-  /* UI Elements */
   --border-radius: 12px;
   --box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 
-  /* Transitions */
   --transition-speed: 0.3s;
 }
 
-/* ======================================= */
-/*             Global Styles               */
-/* ======================================= */
 * {
   margin: 0;
   padding: 0;
@@ -44,10 +30,6 @@ body {
   line-height: 1.6;
   transition: background var(--transition-speed) ease-in-out, color var(--transition-speed) ease-in-out;
 }
-
-/* ======================================= */
-/*         Utility Classes & Animations    */
-/* ======================================= */
 .fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
@@ -74,9 +56,6 @@ body {
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
-/* ======================================= */
-/*             Responsive Design           */
-/* ======================================= */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;

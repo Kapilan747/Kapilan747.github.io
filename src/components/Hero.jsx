@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { FaLinkedin, FaGithub, FaEnvelope, FaCode } from "react-icons/fa"; // Import icons
+import { FaLinkedin, FaGithub, FaEnvelope, FaCode } from "react-icons/fa"; 
 import "./Hero.css";
 
 const variants = {
@@ -107,12 +107,12 @@ const Hero = () => {
                 <a href="https://github.com/Kapilan747" target="_blank" rel="noopener noreferrer">
                   <FaGithub />
                 </a>
-                <a href="mailto:kapilansd@example.com">
+                <a href="#contact">
                   <FaEnvelope />
                 </a>
-                <a href="https://leetcode.com/Kapilan_247/" target="_blank" rel="noopener noreferrer">
+                {/* <a href="https://leetcode.com/Kapilan_247/" target="_blank" rel="noopener noreferrer">
                   <FaCode />
-                </a>
+                </a> */}
               </motion.div>
 
               <motion.div className="down-arrow" variants={variants.arrow} initial="hidden" animate="visible" exit="exit">

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "./Header.css"; // Ensure you have appropriate CSS
+import "./Header.css"; 
 
 const headerVariants = {
   hidden: { scaleX: 0, opacity: 0, transformOrigin: "left" },

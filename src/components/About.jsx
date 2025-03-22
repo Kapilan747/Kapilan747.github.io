@@ -1,45 +1,29 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { FaGraduationCap } from "react-icons/fa";
+import { SiLeetcode, SiHackerrank, SiDatacamp } from "react-icons/si";
 import "./About.css";
-// import profileImage from "../assets/profile.webp";
 
 const containerVariants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.3, delayChildren: 0.2 } },
+  visible: { transition: { staggerChildren: 0.2 } },
 };
 
-const imageVariants = {
-  hidden: { opacity: 0, x: -100, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    scale: 1,
-    transition: { type: "spring", stiffness: 120, damping: 12 },
-  },
-  exit: { opacity: 0, x: -50, scale: 0.9, transition: { duration: 0.5 } },
-};
-
-const titleVariants = {
-  hidden: { opacity: 0, y: -50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
-  exit: { opacity: 0, y: -30, transition: { duration: 0.5 } },
-};
-
-const paragraphVariants = {
-  hidden: { opacity: 0, x: 50 },
+const leftVariants = {
+  hidden: { opacity: 0, x: -50 },
   visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
+  exit: { opacity: 0, x: -50, transition: { duration: 0.5 } },
+};
+
+const topRightVariants = {
+  hidden: { opacity: 0, x: 50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut", delay: 0.2 } },
   exit: { opacity: 0, x: 50, transition: { duration: 0.5 } },
 };
 
-const educationTitleVariants = {
-  hidden: { opacity: 0, y: -30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut", delay: 0.5 } },
-  exit: { opacity: 0, y: -30, transition: { duration: 0.5 } },
-};
-
-const educationParagraphVariants = {
+const bottomRightVariants = {
   hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut", delay: 0.5 } },
+  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut", delay: 0.4 } },
   exit: { opacity: 0, x: 50, transition: { duration: 0.5 } },
 };
 
@@ -65,34 +49,79 @@ const About = () => {
       ref={sectionRef}
       variants={containerVariants}
       initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      exit="exit"
+      whileInView="visible"
+      exit="hidden"
+      viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.8 }}
     >
-      {/* Background overlay for clarity */}
+      {/* Background Overlay */}
       <div className="about-overlay"></div>
-      
-      {/* New box container wrapping all content */}
-      <div className="about-box">
-        {/* Optional Profile Image */}
-        {/* <motion.div className="about-image" variants={imageVariants}>
-          <img src={profileImage} alt="Kapilan" />
-        </motion.div> */}
-        <div className="about-text-container">
-          <motion.h2 className="about-title" variants={titleVariants}>
-            About Me
-          </motion.h2>
-          <motion.p className="about-paragraph" variants={paragraphVariants}>
-            I'm Kapilan S D, a passionate data engineer and web designer who crafts immersive digital experiences.
-            By merging innovative data solutions with modern design principles, I create interactive, scalable systems
-            that delight users and drive results.
-          </motion.p>
-          <motion.div className="about-education">
-            <motion.h3 variants={educationTitleVariants}>Education</motion.h3>
-            <motion.p variants={educationParagraphVariants}>
-              B.Tech in Artificial Intelligence and Data Science <br />
+
+      <div className="about-content-wrapper">
+        {/* Left Box: About Me */}
+        <motion.div
+          className="about-box about-me"
+          variants={leftVariants}
+          initial="hidden"
+          whileInView="visible"
+          exit="exit"
+          viewport={{ once: false, amount: 0.3 }}
+        >
+          <h2>🚀 About Me</h2>
+          <p>
+            I'm Kapilan S D, a passionate problem solver and technology enthusiast who specializes in transforming data into meaningful insights.
+            With a strong foundation in data engineering and software development, I craft efficient solutions that drive innovation and efficiency.
+
+            My expertise lies in analyzing complex datasets, designing scalable systems, and building intelligent automation processes
+            that enhance decision-making and streamline workflows. I have experience working with structured and unstructured data,
+            optimizing database performance, and developing seamless integrations between systems.
+
+            {/* Beyond data, I have a keen eye for **modern web development**, ensuring that applications are not only functional
+            but also intuitive and user-friendly. I thrive on **solving intricate challenges, optimizing performance, and constantly exploring new technologies**
+            to push boundaries and create impactful digital experiences. */}
+          </p>
+
+
+        </motion.div>
+
+        <div className="about-right">
+           <motion.div
+            className="about-box academics"
+            variants={topRightVariants}
+            initial="hidden"
+            whileInView="visible"
+            exit="exit"
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            <h3>
+              <FaGraduationCap className="academics-icon" /> Academics
+            </h3>
+            <p>
+              B.Tech in Artificial Intelligence and Data Science<br />
               [Dr.N.G.P Institute of Technology], [IIIrd year]
-            </motion.p>
+            </p>
+          </motion.div>
+
+           <motion.div
+            className="about-box coding-profiles"
+            variants={bottomRightVariants}
+            initial="hidden"
+            whileInView="visible"
+            exit="exit"
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            <h2>💻 Coding Profiles</h2>
+            <div className="profiles">
+              <a href="https://leetcode.com/Kapilan_247" target="_blank" rel="noopener noreferrer">
+                <SiLeetcode className="coding-icon leetcode" /> LeetCode
+              </a>
+              <a href="https://www.hackerrank.com/profile/Kapilan357" target="_blank" rel="noopener noreferrer">
+                <SiHackerrank className="coding-icon hackerrank" /> HackerRank
+              </a>
+              <a href="https://www.datacamp.com/profile/KapilanSD" target="_blank" rel="noopener noreferrer">
+                <SiDatacamp className="coding-icon datacamp" /> DataCamp
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>

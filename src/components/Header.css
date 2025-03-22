@@ -29,4 +29,55 @@
   .header nav a:hover {
     color: #03abff;
   }
+  @media (max-width: 1024px) {
+    /* Reduce width for medium screens (tablets) */
+    .header {
+      width: 80%;
+      padding: 10px 30px;
+    }
+    
+    .header nav a {
+      margin: 0 20px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Full-width header for mobile screens */
+    .header {
+      width: 90%;
+      padding: 10px 20px;
+    }
+  
+    .header nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+  
+    .header nav a {
+      font-size: 0.95rem;
+      margin: 0 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      width: 95%;
+      padding: 8px 15px;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .header nav {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .header nav a {
+      font-size: 0.9rem;
+      margin: 5px 10px;
+    }
+  }
   

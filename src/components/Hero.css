@@ -1,5 +1,4 @@
-/* Global Reset */
-*, *::before, *::after {
+ *, *::before, *::after {
     box-sizing: border-box;
   }
   body {
@@ -9,8 +8,7 @@
     font-family: 'Poppins', sans-serif;
   }
   
-  /* Hero Section */
-  .hero-section {
+   .hero-section {
     position: relative;
     height: 100vh;
     background: url('../assets/hero-bg.webp') no-repeat center center/cover;
@@ -19,8 +17,7 @@
     justify-content: center;
   }
   
-  /* Overlay */
-  .hero-overlay {
+   .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -35,8 +32,7 @@
     padding: 20px;
   }
   
-  /* Title */
-  .hero-title {
+   .hero-title {
     font-size: 3rem;
     color: #333;
     margin-bottom: 20px;
@@ -46,27 +42,24 @@
     font-weight: 700;
   }
   
-  /* Subtitle */
-  .hero-subtitle {
+   .hero-subtitle {
     font-size: 1.5rem;
     color: #555;
     margin-bottom: 40px;
   }
   
-  /* Buttons Container */
-  .hero-buttons {
+   .hero-buttons {
     display: flex;
     gap: 20px;
     margin-bottom: 60px;
   }
   
-  /* Hero Button (Fixed: No Unwanted Inner Animation) */
-.hero-btn {
+ .hero-btn {
     position: relative;
     display: inline-block;
     padding: 15px 40px;
     margin: 20px 0;
-    color: black; /* Ensure text remains visible */
+    color: black; 
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -75,18 +68,17 @@
     border: none;
     background: transparent;
     overflow: hidden;
-    z-index: 1; /* Keeps text above the ripple */
+    z-index: 1;  
   }
   
-  /* Ripple Effect (Fixed - Now Behind Text) */
-  .hero-btn::before {
+   .hero-btn::before {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     width: 50px;
     height: 20px;
-    background:#03abff; /* Make it semi-transparent */
+    background:#03abff; 
     border-radius: 50%;
     transform:scale(0);
     transition: transform 0.5s ease-out;
@@ -99,20 +91,17 @@
     opacity: 1;
   }
   
-  /* Maintain Text Visibility on Hover */
-  .hero-btn:hover {
-    color: black !important; /* Ensures text does not disappear */
+   .hero-btn:hover {
+    color: black !important;  
   }
   
-  /* Ensure Borders Stay Outside */
-  .hero-btn span {
+   .hero-btn span {
     position: absolute;
     display: block;
     z-index: 2;
   }
   
-  /* Top Border */
-  .hero-btn span:nth-child(1) {
+   .hero-btn span:nth-child(1) {
     top: 0;
     left: 0;
     width: 100%;
@@ -121,8 +110,7 @@
     animation: border-top 3s linear infinite;
   }
   
-  /* Right Border */
-  .hero-btn span:nth-child(2) {
+   .hero-btn span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 2px;
@@ -132,8 +120,7 @@
     animation-delay: 1.5s;
   }
   
-  /* Bottom Border */
-  .hero-btn span:nth-child(3) {
+   .hero-btn span:nth-child(3) {
     bottom: 0;
     right: 0;
     width: 100%;
@@ -143,8 +130,7 @@
     animation-delay: 3s;
   }
   
-  /* Left Border */
-  .hero-btn span:nth-child(4) {
+   .hero-btn span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;
@@ -154,8 +140,7 @@
     animation-delay: 1.5s;
   }
   
-  /* Keyframes for border animations */
-  @keyframes border-top {
+   @keyframes border-top {
     0% { left: -100%; }
     100% { left: 100%; }
   }
@@ -175,15 +160,13 @@
     100% { bottom: 100%; }
   }
   
-  /* Down Arrow */
-  .down-arrow {
+   .down-arrow {
     font-size: 2.5rem;
     color: #333;
     margin-top: 20px;
   }
   
-  /* Social Links */
-.hero-socials {
+ .hero-socials {
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -200,3 +183,69 @@
   transform: scale(1.2);
   color:#03abff;
 }
+ @media (max-width: 1024px) {
+  .hero-section {
+    padding: 80px 15px;
+  }
+  .hero-title {
+    font-size: 2.5rem;  
+  }
+  .hero-subtitle {
+    font-size: 1.3rem;  
+  }
+  .hero-btn {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+  }
+  .hero-socials a {
+    font-size: 1.8rem;
+  }
+  .down-arrow {
+    font-size: 2rem;
+  }
+}
+
+ @media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 10px;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+  .hero-socials a {
+    font-size: 1.5rem;
+  }
+  .down-arrow {
+    font-size: 1.8rem;
+  }
+}
+
+ @media (max-width: 480px) {
+  .hero-section {
+    padding: 40px 5px;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .hero-btn {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+  .hero-socials a {
+    font-size: 1.2rem;
+  }
+  .down-arrow {
+    font-size: 1.5rem;
+  }
+}
+

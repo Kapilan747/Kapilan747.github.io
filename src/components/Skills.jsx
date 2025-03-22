@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import data from "../data"; // Import data.js
-import "./Skills.css"; // Import styles
+import data from "../data";  
+import "./Skills.css";  
 
 const categoryOrder = [
   { label: "Programming Languages", type: "programming" },
