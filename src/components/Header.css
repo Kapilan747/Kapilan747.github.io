@@ -1,3 +1,4 @@
+/* Global Reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -7,29 +8,30 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Desktop Header */
 .header {
   position: fixed;
-  top: 10px;
+  top: 15px;
+  left: 20%;
+  transform: translateX(-50%);
   width: 60%;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
+  max-width: 1100px;
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
-  padding: 10px 50px;
+  padding: 12px 50px;
   border-radius: 25px;
-  box-shadow: 0 4px 12px rgba(142, 73, 73, 0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 1000;
 }
 
+/* Desktop Navigation */
 .desktop-nav {
   display: flex;
   gap: 30px;
 }
-
 .desktop-nav a {
   color: #333;
   text-decoration: none;
@@ -37,11 +39,11 @@ body {
   font-size: 1.1rem;
   transition: color 0.3s ease;
 }
-
 .desktop-nav a:hover {
   color: #03abff;
 }
 
+/* Mobile Menu Button - hidden on desktop */
 .menu-btn {
   display: none;
   position: absolute;
@@ -55,48 +57,53 @@ body {
   color: #333;
 }
 
+/* Sidebar Overlay */
 .sidebar-overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 99;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
 }
 
+/* Sidebar (Mobile Navigation) */
 .sidebar {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -250px;
   width: 250px;
   height: 100vh;
   background: white;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 100;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  z-index: 1000;
   display: flex;
   flex-direction: column;
   padding: 20px;
+  transition: right 0.3s ease-in-out;
 }
-
+.sidebar.open {
+  right: 0;
+}
 .sidebar-nav {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-top: 40px;
 }
-
 .sidebar-nav a {
   color: #333;
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
-
 .sidebar-nav a:hover {
   color: #03abff;
 }
 
+/* Close Button in Sidebar */
 .close-btn {
   align-self: flex-end;
   font-size: 1.8rem;
@@ -106,11 +113,13 @@ body {
   color: #333;
 }
 
+/* Media Queries */
 
+/* For screens up to 1024px */
 @media (max-width: 1024px) {
   .header {
     width: 80%;
-    padding: 10px 30px;
+    padding: 12px 30px;
     border-radius: 20px;
   }
   .desktop-nav a {
@@ -118,16 +127,40 @@ body {
   }
 }
 
- @media (max-width: 768px) {
+/* For screens up to 768px (mobile/tablet) */
+@media (max-width: 768px) {
   .header {
     width: 100%;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 0;
+    justify-content: space-between;
+    left: 0; /* Remove centering for full-width mobile */
+    transform: none;
   }
   .desktop-nav {
     display: none;
   }
   .menu-btn {
     display: block;
+  }
+  /* Show sidebar overlay when active */
+  .sidebar-overlay.show {
+    display: block;
+  }
+}
+
+/* For screens up to 480px */
+@media (max-width: 480px) {
+  .header {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  .menu-btn {
+    font-size: 1.6rem;
+    right: 15px;
+  }
+  .sidebar-nav a {
+    font-size: 1.1rem;
   }
 }

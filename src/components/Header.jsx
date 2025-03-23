@@ -12,17 +12,13 @@ const headerVariants = {
   },
 };
 
-const sidebarVariants = {
-  hidden: { x: "100%", opacity: 0 },
-  visible: { x: "0%", opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
-  exit: { x: "100%", opacity: 0, transition: { duration: 0.5, ease: "easeIn" } },
-};
-
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
   return (
     <>
+      {/* Desktop Header */}
       <motion.header
         className="header"
         variants={headerVariants}
@@ -36,47 +32,33 @@ const Header = () => {
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </nav>
-        <button className="menu-btn" onClick={() => setSidebarOpen(true)}>
+        {/* Mobile Menu Button */}
+        <button className="menu-btn" onClick={toggleSidebar}>
           <FaBars />
         </button>
       </motion.header>
 
+      {/* Mobile Sidebar */}
       <AnimatePresence>
         {sidebarOpen && (
           <>
             <motion.div
-              className="sidebar-overlay"
+              className="sidebar-overlay show"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              onClick={() => setSidebarOpen(false)}
+              onClick={toggleSidebar}
             ></motion.div>
-            <motion.div
-              className="sidebar"
-              variants={sidebarVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              <button className="close-btn" onClick={() => setSidebarOpen(false)}>
+            <motion.div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
+              <button className="close-btn" onClick={toggleSidebar}>
                 <FaTimes />
               </button>
               <nav className="sidebar-nav">
-                <a href="#hero" onClick={() => setSidebarOpen(false)}>
-                  Home
-                </a>
-                <a href="#about" onClick={() => setSidebarOpen(false)}>
-                  About
-                </a>
-                <a href="#projects" onClick={() => setSidebarOpen(false)}>
-                  Projects
-                </a>
-                <a href="#skills" onClick={() => setSidebarOpen(false)}>
-                  Skills
-                </a>
-                <a href="#contact" onClick={() => setSidebarOpen(false)}>
-                  Contact
-                </a>
+                <a href="#hero" onClick={toggleSidebar}>Home</a>
+                <a href="#about" onClick={toggleSidebar}>About</a>
+                <a href="#projects" onClick={toggleSidebar}>Projects</a>
+                <a href="#skills" onClick={toggleSidebar}>Skills</a>
+                <a href="#contact" onClick={toggleSidebar}>Contact</a>
               </nav>
             </motion.div>
           </>
