@@ -1,5 +1,4 @@
-/* Global Reset */
-*, *::before, *::after {
+ *, *::before, *::after {
   box-sizing: border-box;
 }
 body {
@@ -8,8 +7,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Desktop Header */
-.header {
+ .header {
   position: fixed;
   top: 15px;
   left: 20%;
@@ -27,8 +25,7 @@ body {
   z-index: 1000;
 }
 
-/* Desktop Navigation */
-.desktop-nav {
+ .desktop-nav {
   display: flex;
   gap: 30px;
 }
@@ -43,8 +40,7 @@ body {
   color: #03abff;
 }
 
-/* Mobile Menu Button - hidden on desktop */
-.menu-btn {
+ .menu-btn {
   display: none;
   position: absolute;
   right: 20px;
@@ -57,8 +53,7 @@ body {
   color: #333;
 }
 
-/* Sidebar Overlay */
-.sidebar-overlay {
+ .sidebar-overlay {
   display: none;
   position: fixed;
   top: 0;
@@ -69,8 +64,7 @@ body {
   z-index: 999;
 }
 
-/* Sidebar (Mobile Navigation) */
-.sidebar {
+ .sidebar {
   position: fixed;
   top: 0;
   right: -250px;
@@ -103,8 +97,7 @@ body {
   color: #03abff;
 }
 
-/* Close Button in Sidebar */
-.close-btn {
+ .close-btn {
   align-self: flex-end;
   font-size: 1.8rem;
   background: none;
@@ -113,9 +106,7 @@ body {
   color: #333;
 }
 
-/* Media Queries */
 
-/* For screens up to 1024px */
 @media (max-width: 1024px) {
   .header {
     width: 80%;
@@ -127,14 +118,13 @@ body {
   }
 }
 
-/* For screens up to 768px (mobile/tablet) */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .header {
     width: 100%;
     padding: 12px 20px;
     border-radius: 0;
     justify-content: space-between;
-    left: 0; /* Remove centering for full-width mobile */
+    left: 0; 
     transform: none;
   }
   .desktop-nav {
@@ -143,14 +133,12 @@ body {
   .menu-btn {
     display: block;
   }
-  /* Show sidebar overlay when active */
-  .sidebar-overlay.show {
+   .sidebar-overlay.show {
     display: block;
   }
 }
 
-/* For screens up to 480px */
-@media (max-width: 480px) {
+ @media (max-width: 480px) {
   .header {
     width: 100%;
     padding: 10px 15px;
