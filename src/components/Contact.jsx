@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
-// Animations
-const containerVariants = {
+ const containerVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
@@ -33,25 +32,44 @@ const messageVariants = {
 const Contact = () => {
   const form = useRef();
   const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const name = form.current.from_name.value.trim();
+    const email = form.current.from_email.value.trim();
+    const message = form.current.message.value.trim();
+
+    if (!name || !email || !message) {
+      setStatus("⚠️ All fields are required.");
+      return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setStatus("⚠️ Please enter a valid email address.");
+      return;
+    }
+
+    setLoading(true);
+
     emailjs
       .sendForm(
-        "service_534vqso",   // 🔴 HARDCODED SERVICE ID
-        "template_7wdhwfq",  // 🔴 HARDCODED TEMPLATE ID
+        "service_534vqso", 
+        "template_7wdhwfq",  
         form.current,
-        "Nk082qpRJDe8BHhRu"  // 🔴 HARDCODED PUBLIC KEY
+        "Nk082qpRJDe8BHhRu"  
       )
       .then(
         () => {
           setStatus("✅ Message sent successfully!");
+          setLoading(false);
           form.current.reset();
           setTimeout(() => setStatus(""), 3000);
         },
         () => {
           setStatus("❌ Failed to send message. Try again.");
+          setLoading(false);
           setTimeout(() => setStatus(""), 3000);
         }
       );
@@ -64,7 +82,7 @@ const Contact = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }} 
+      viewport={{ once: true, amount: 0.3 }} 
     >
       <motion.div className="contact-container">
         <motion.h2 variants={inputVariants}>Contact Me</motion.h2>
@@ -75,14 +93,14 @@ const Contact = () => {
         <motion.form ref={form} onSubmit={sendEmail} className="contact-form">
           <motion.input
             type="text"
-            name="user_name"
+            name="from_name"  
             placeholder="Your Name"
             required
             variants={inputVariants}
           />
           <motion.input
             type="email"
-            name="user_email"
+            name="from_email"  
             placeholder="Your Email"
             required
             variants={inputVariants}
@@ -96,11 +114,12 @@ const Contact = () => {
 
           <motion.button
             type="submit"
+            disabled={loading}
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
           >
-            Send Message
+            {loading ? "Sending..." : "Send Message"}
           </motion.button>
         </motion.form>
 
