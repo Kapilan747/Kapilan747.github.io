@@ -121,6 +121,9 @@ const Projects = () => {
             );
           })}
         </div>
+          <a className="view-more-btn" href="https://github.com/Kapilan747" target="_blank" rel="noopener noreferrer">
+            View More 
+          </a>
       </motion.section>
     </AnimatePresence>
   );

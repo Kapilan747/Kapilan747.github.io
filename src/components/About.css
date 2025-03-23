@@ -55,11 +55,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-.about-me h2 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-  color: #03abff;
-}
 .about-me {
   text-align: center;
 }
@@ -67,7 +62,7 @@ body {
 .about-me h2 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #007bff; 
+  color: #03abff; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +78,7 @@ body {
   max-width: 900px;
   margin: 20px auto; 
   padding: 10px 30px;
-  border-left: 5px solid #007bff; 
+  border-left: 5px solid #03abff; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -109,6 +104,7 @@ body {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+  font-family: 'Poppins', sans-serif;
   gap: 12px;
 }
 .coding-profiles a {
@@ -118,6 +114,7 @@ body {
   font-size: 1.1rem;
   color: #333;
   font-weight: 500;
+  font-family: 'Poppins', sans-serif;
   background: rgba(255, 255, 255, 0.9);
   padding: 8px 12px;
   border-radius: 8px;
@@ -136,6 +133,9 @@ body {
 }
 
 .coding-profiles h2{
+  color:#03abff;
+}
+.about-box h2{
   color:#03abff;
 }
 
@@ -165,7 +165,7 @@ body {
     margin: 15px auto;
     padding: 10px 20px;
     font-size: 1rem; 
-    border-left: 4px solid #007bff; 
+    border-left: 4px solid #03abff; 
   }
 
   .academics h3 {
@@ -189,3 +189,41 @@ body {
   }
 }
 
+.about-me h2 {
+  /* font-size: 2.8rem; */
+  font-weight: 700;
+  color: #03abff;
+  text-transform: uppercase;
+}
+
+.about-me p {
+  /* font-size: 1.2rem; */
+  font-weight: 400;
+  line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.academics h3 {
+  /* font-size: 2.4rem; */
+  font-weight: 600;
+  color: #03abff;
+}
+
+.academics p {
+  /* font-size: 1.15rem; */
+  font-weight: 400;
+  color: #333;
+}
+
+.coding-profiles h2 {
+  /* font-size: 2.2rem; */
+  font-weight: 600;
+  color: #03abff;
+}
+
+.coding-profiles a {
+  /* font-size: 1.1rem; */
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}

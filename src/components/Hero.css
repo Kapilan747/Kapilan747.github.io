@@ -250,3 +250,23 @@
   }
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-title, 
+.hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-btn {
+  font-family: 'Nunito', sans-serif;
+}
+
+.hero-socials a {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.down-arrow {
+  font-family: 'Poppins', sans-serif;
+}

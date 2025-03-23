@@ -143,3 +143,15 @@
     font-size: 12px;
   }
 }
+#tech-stack-title {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.label-stack {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.tech-label {
+  font-family: 'Poppins', sans-serif;
+}
+  

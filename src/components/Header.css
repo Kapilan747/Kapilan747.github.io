@@ -1,4 +1,4 @@
- *, *::before, *::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 body {
@@ -18,7 +18,7 @@ body {
   backdrop-filter: blur(10px);
   padding: 12px 50px;
   border-radius: 25px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(9, 7, 7, 0.15);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,6 +51,15 @@ body {
   border: none;
   cursor: pointer;
   color: #333;
+}
+.desktop-nav a, 
+.sidebar-nav a {
+  font-family: 'Montserrat', sans-serif;  
+  font-weight: 500;
+}
+
+button, .menu-btn, .close-btn {
+  font-family: 'Nunito', sans-serif; 
 }
 
  .sidebar-overlay {

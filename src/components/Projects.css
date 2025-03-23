@@ -203,3 +203,25 @@
   }
 }
 
+.view-more-btn {
+  display: inline-block;
+  margin-top: 40px;
+  margin-left: 0px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.view-more-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #009acb);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

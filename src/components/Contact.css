@@ -21,8 +21,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Contact Form */
-.contact-form {
+ .contact-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -102,3 +101,10 @@
   }
 }
 
+.contact-section h2,
+.contact-form input,
+.contact-form textarea,
+.contact-form button,
+.status-message {
+  font-family: 'Poppins', sans-serif;
+}
