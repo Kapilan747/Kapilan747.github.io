@@ -152,6 +152,7 @@ button, .menu-btn, .close-btn {
     width: 100%;
     padding: 10px 15px;
     font-size: 0.9rem;
+    top:0px;
   }
   .menu-btn {
     font-size: 1.6rem;

@@ -1,110 +1,109 @@
  .contact-section {
-  padding: 100px 20px;
-  background: #f9f9f8;  
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
   text-align: center;
 }
 
- .contact-section h2 {
-  color: #03abff;
-  font-size: 2.1rem;
+.social-connect h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.social-connect p {
+  font-size: 1rem;
+  color: #666;
   margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
 }
 
- .contact-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+ .social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
- .contact-form {
+.social-card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
   padding: 15px;
-  border: 2px solid #03abff;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #0280c4;
-  box-shadow: 0 0 10px rgba(3, 171, 255, 0.3);
+.social-icon {
+  color: #03abff;
+  font-size: 2rem;
+  margin-bottom: 5px;
 }
 
-.contact-form button {
-  padding: 15px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #03abff, #0280c4);
-  color: white;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  font-family: 'Poppins', sans-serif;
-}
-
-.contact-form button:hover {
-  background: linear-gradient(135deg, #0280c4, #03abff);
-}
-
-.status-message {
-  margin-top: 15px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: green; 
-  opacity: 0.9;
-  transition: opacity 0.3s ease-in-out;
-}
-
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .contact-section {
-    padding: 50px 10px;
+    padding: 30px 15px;
   }
 
-  .contact-section h2 {
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .social-card {
+    padding: 12px;
+  }
+
+  .social-icon {
     font-size: 1.8rem;
-    margin-bottom: 15px;
-  }
-
-  .contact-container {
-    max-width: 100%;
-    width: 100%;
-    padding: 20px;
-    margin: 0 10px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-
-  .contact-form button {
-    padding: 10px;
-    font-size: 1rem;
-  }
-
-  .status-message {
-    font-size: 0.9rem;
   }
 }
 
-.contact-section h2,
-.contact-form input,
-.contact-form textarea,
-.contact-form button,
-.status-message {
-  font-family: 'Poppins', sans-serif;
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 25px 10px;
+  }
+
+  .social-connect h3 {
+    font-size: 1.5rem;
+  }
+
+  .social-connect p {
+    font-size: 0.9rem;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;  
+  }
+
+  .social-card {
+    padding: 10px;
+  }
+
+  .social-icon {
+    font-size: 1.5rem;
+  }
+}
+
+
+.social-card {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+  background: #fff;
+}
+
+.social-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.social-card:hover .social-icon{
+  color:black;
+
 }

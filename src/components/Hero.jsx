@@ -70,8 +70,8 @@ const Hero = () => {
                   words={[
                     "Crafting innovative data solutions.",
                     "Web Scraper.",
-                    "Building scalable systems.",
                     "Data Analyst.",
+                    "Building scalable systems.",
                     "Data Engineer."
                   ]}
                   loop

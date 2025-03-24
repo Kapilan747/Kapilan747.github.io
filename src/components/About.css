@@ -143,51 +143,6 @@ body {
 .hackerrank { color: #2EC866; }
 .datacamp { color: #1F9E8F; }
 
-@media (max-width: 768px) {
-  .about-content-wrapper {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; 
-  }
-
-  .about-section {
-    background: none;
-  }
-
-  .about-box {
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  .about-me p {
-    max-width: 100%;
-    margin: 15px auto;
-    padding: 10px 20px;
-    font-size: 1rem; 
-    border-left: 4px solid #03abff; 
-  }
-
-  .academics h3 {
-    font-size: 1.8rem; 
-  }
-  .academics p {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-
-  .coding-profiles {
-    margin-top: 15px;
-  }
-  .coding-profiles a {
-    font-size: 1rem;
-    padding: 6px 10px;
-    border-radius: 6px;
-  }
-  .coding-icon {
-    font-size: 1.4rem;
-  }
-}
 
 .about-me h2 {
   /* font-size: 2.8rem; */
@@ -199,7 +154,7 @@ body {
 .about-me p {
   /* font-size: 1.2rem; */
   font-weight: 400;
-  line-height: 1.8;
+  line-height: 1.5;
   font-family: 'Poppins', sans-serif;
   color: #333;
 }
@@ -226,4 +181,96 @@ body {
   /* font-size: 1.1rem; */
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
+}
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 80px 10px;
+    background: none;
+  }
+
+  .about-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .about-box {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .about-me p {
+    max-width: 100%;
+    margin: 15px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-left: 4px solid #03abff;
+  }
+
+  .academics h3 {
+    font-size: 1.8rem;
+  }
+
+  .academics p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .coding-profiles {
+    margin-top: 15px;
+  }
+
+  .coding-profiles a {
+    font-size: 1rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+
+  .coding-icon {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 60px 5px;
+  }
+
+  .about-me h2 {
+    font-size: 2rem;
+  }
+
+  .about-me p {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .academics h3 {
+    font-size: 1.6rem;
+  }
+
+  .academics p {
+    font-size: 0.9rem;
+  }
+
+  .coding-profiles h2 {
+    font-size: 1.8rem;
+  }
+
+  .coding-profiles a {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+
+  .coding-profiles {
+    margin-bottom: 150px;
+  }
+
+  .coding-icon {
+    font-size: 1.2rem;
+  }
 }

@@ -54,12 +54,10 @@ const About = () => {
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.8 }}
     >
-      {/* Background Overlay */}
-      <div className="about-overlay"></div>
+       <div className="about-overlay"></div>
 
       <div className="about-content-wrapper">
-        {/* Left Box: About Me */}
-        <motion.div
+         <motion.div
           className="about-box about-me"
           variants={leftVariants}
           initial="hidden"
@@ -70,22 +68,26 @@ const About = () => {
           <h2>🚀 About Me</h2>
           <p>
             I'm Kapilan S D, a passionate problem solver and technology enthusiast who specializes in transforming data into meaningful insights.
-            With a strong foundation in data engineering and software development, I craft efficient solutions that drive innovation and efficiency.
+          </p>
+          <p>
+          With a strong foundation in data engineering and software development, I craft efficient solutions that drive innovation and efficiency.
 
+          </p>
+          <p>
             My expertise lies in analyzing complex datasets, designing scalable systems, and building intelligent automation processes
-            that enhance decision-making and streamline workflows. I have experience working with structured and unstructured data,
-            optimizing database performance, and developing seamless integrations between systems.
-
+            that enhance decision-making and streamline workflows. 
+          </p>
+          {/* <p> */}
             {/* Beyond data, I have a keen eye for **modern web development**, ensuring that applications are not only functional
             but also intuitive and user-friendly. I thrive on **solving intricate challenges, optimizing performance, and constantly exploring new technologies**
             to push boundaries and create impactful digital experiences. */}
-          </p>
+          {/* </p> */}
 
 
         </motion.div>
 
         <div className="about-right">
-           <motion.div
+          <motion.div
             className="about-box academics"
             variants={topRightVariants}
             initial="hidden"
@@ -100,9 +102,13 @@ const About = () => {
               B.Tech in Artificial Intelligence and Data Science<br />
               [Dr.N.G.P Institute of Technology], [IIIrd year]
             </p>
+            <p>
+              2022-2026<br />
+              Current CGPA: 7.98
+            </p>
           </motion.div>
 
-           <motion.div
+          <motion.div
             className="about-box coding-profiles"
             variants={bottomRightVariants}
             initial="hidden"
