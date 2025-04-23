@@ -90,13 +90,18 @@ const Hero = () => {
                   <span></span>
                   See My Work
                 </motion.a>
-                <motion.a href="/resume.pdf" download="KapilanResume.pdf" className="hero-btn download-btn" variants={variants.button}>
+                <motion.a
+                  href="https://drive.google.com/uc?export=download&id=1iM81rF4K32Vq3jO5AdE2QrZux-aQPZfR"
+                  className="hero-btn download-btn"
+                  variants={variants.button}
+                >
                   <span></span>
                   <span></span>
                   <span></span>
                   <span></span>
                   Download Resume
                 </motion.a>
+
               </motion.div>
               
               {/* Social Links */}
