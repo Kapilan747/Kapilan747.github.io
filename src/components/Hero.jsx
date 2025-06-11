@@ -91,7 +91,7 @@ const Hero = () => {
                   See My Work
                 </motion.a>
                 <motion.a
-                  href="https://drive.google.com/uc?export=download&id=1iM81rF4K32Vq3jO5AdE2QrZux-aQPZfR"
+                  href="https://drive.google.com/uc?export=download&id=1RBRvvij7vqfl_2lukt0AhivcJH8ttXvv"
                   className="hero-btn download-btn"
                   variants={variants.button}
                 >
