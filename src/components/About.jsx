@@ -100,11 +100,11 @@ const About = () => {
             </h3>
             <p>
               B.Tech in Artificial Intelligence and Data Science<br />
-              [Dr.N.G.P Institute of Technology], [IIIrd year]
+              [Dr.N.G.P Institute of Technology], [Final year]
             </p>
             <p>
               2022-2026<br />
-              Current CGPA: 7.98
+              Current CGPA: 7.8
             </p>
           </motion.div>
 
